@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./signin.css";
+import axios from "axios";
 
 class SignIn extends Component {
     constructor(props) {
@@ -28,7 +28,7 @@ class SignIn extends Component {
             </div>
         );
     }
-    setUsername(event) {
+    setUserName(event) {
         this.setState({ username: event.target.value });
     }
     setPassword(event) {
@@ -69,3 +69,4 @@ class SignIn extends Component {
             );
     }
 }
+export default SignIn;
