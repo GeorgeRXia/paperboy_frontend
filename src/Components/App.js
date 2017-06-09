@@ -24,6 +24,9 @@ class App extends Component {
             return <Profile userid={this.state.user_id} />;
         }
     }
+    setLogIn(passedLogin, userid) {
+        this.setState({ LogIn: passedLogin, user_id: userid });
+    }
 }
 
 export default App;

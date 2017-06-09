@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import "./signin.css";
 
 class SignIn extends Component {
-    constructor() {
+    constructor(props) {
+        super(props);
         this.state = {
             username: "",
             password: ""
@@ -31,5 +33,39 @@ class SignIn extends Component {
     }
     setPassword(event) {
         this.setState({ password: event.target.value });
+    }
+    logIn() {
+        axios
+            .get("/users", {
+                params: {
+                    name: this.state.username,
+                    password: this.state.password
+                }
+            })
+            .then(
+                function(response) {
+                    this.props.logInFunction(
+                        response.data.views,
+                        response.data.user_id
+                    );
+                }.bind(this)
+            );
+    }
+    createAccount() {
+        axios
+            .post("/users", {
+                data: {
+                    name: this.state.username,
+                    password: this.state.password
+                }
+            })
+            .then(
+                function(response) {
+                    this.props.logInFunction(
+                        response.data.views,
+                        response.data.user_id
+                    );
+                }.bind(this)
+            );
     }
 }
