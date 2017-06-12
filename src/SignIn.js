@@ -18,11 +18,11 @@ class SignIn extends Component {
             <div className="SignIn-main">
                 <h1>Welcome to PaperBoy</h1>
                 <h2>Please Sign In</h2>
-                <input onChange={this.setUsername} placeholder="username" />
+                <input onChange={this.setUserName} placeholder="username" />
                 <input onChange={this.setPassword} placeholder="password" />
                 <button onClick={this.logIn}> Log In </button>
                 <h2> Or Create Account </h2>
-                <input onChange={this.setUsername} placeholder="username" />
+                <input onChange={this.setUserName} placeholder="username" />
                 <input onChange={this.setPassword} placeholder="password" />
                 <button onClick={this.createAccount}> Create Account </button>
             </div>
