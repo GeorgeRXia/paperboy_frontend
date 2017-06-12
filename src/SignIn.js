@@ -44,7 +44,7 @@ class SignIn extends Component {
             })
             .then(
                 function(response) {
-                  console.log(response);
+                  console.log(response.data);
                     this.props.logInFunction(
                         response.data.views,
                         response.data.user_id
@@ -62,7 +62,7 @@ class SignIn extends Component {
             })
             .then(
                 function(response) {
-                  console.log(response);
+                  console.log(response.data);
                     this.props.logInFunction(
                         response.data.views,
                         response.data.user_id
