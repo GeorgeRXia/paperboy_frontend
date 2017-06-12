@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import nytimes from "./nytimes.png";
+import guardian from "./gaurdian.svg";
+import intercept from "./intercept.jpg";
+import billpenn from "./billypenn.jpg";
+import jacobin from "./jacobin.png";
 import axios from "axios";
 
 class Selector extends Component {
@@ -17,6 +21,30 @@ class Selector extends Component {
                     src={nytimes}
                     alt="newyorktimes"
                     id="1"
+                    onClick={this.selectSource}
+                />
+                <img
+                    src={intercept}
+                    alt="intercept"
+                    id="2"
+                    onClick={this.selectSource}
+                />
+                <img
+                    src={guardian}
+                    alt="gaurdian"
+                    id="3"
+                    onClick={this.selectSource}
+                />
+                <img
+                    src={jacobin}
+                    alt="jacobin"
+                    id="4"
+                    onClick={this.selectSource}
+                />
+                <img
+                    src={billpenn}
+                    alt="billpenn"
+                    id="5"
                     onClick={this.selectSource}
                 />
             </div>
