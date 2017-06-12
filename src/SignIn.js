@@ -38,7 +38,7 @@ class SignIn extends Component {
         axios
             .get("/users", {
                 params: {
-                    name: this.state.username,
+                    username: this.state.username,
                     password: this.state.password
                 }
             })
@@ -55,7 +55,7 @@ class SignIn extends Component {
         axios
             .post("/users", {
                 data: {
-                    name: this.state.username,
+                    username: this.state.username,
                     password: this.state.password
                 }
             })

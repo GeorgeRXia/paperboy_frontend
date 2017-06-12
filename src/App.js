@@ -7,7 +7,7 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            LogIn: true,
+            LogIn: false,
             user_id: 0
         };
         this.setLogIn = this.setLogIn.bind(this);
