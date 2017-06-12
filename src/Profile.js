@@ -43,7 +43,7 @@ class Profile extends Component {
         return <Selector feedId={this.state.feed_id} />;
     }
     displayNewsFeed() {
-        return <NewsFeed />;
+        return <NewsFeed feedId={this.state.feed_id} />;
     }
 }
 
