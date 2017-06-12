@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import nytimes from "./nytimes.png";
+import axios from "axios";
 
 class Selector extends Component {
     constructor(props) {
@@ -23,8 +24,17 @@ class Selector extends Component {
     }
     selectSource(event) {
         var parseId = parseInt(event.target.id);
-        console.log(this.state.feed_id);
-        console.log(parseId);
+        var feedId = this.state.feed_id;
+        axios
+            .post("/chosensites", {
+                data: {
+                    feed_id: feedId,
+                    newssite_id: parseId
+                }
+            })
+            .then(function(response) {
+                console.log(response);
+            });
     }
 }
 export default Selector;
