@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import SignIn from "./SignIn";
 import Profile from "./Profile";
+import axios from 'axios';
 
 class App extends Component {
     constructor() {
@@ -21,6 +22,16 @@ class App extends Component {
     }
     setLogIn(passedLogin, userid) {
         this.setState({ LogIn: passedLogin, user_id: userid });
+    }
+
+    componentDidMount() {
+      axios.get("https://newsapi.org/v1/articles?source=the-guardian-uk&sortBy=top&apiKey=2706fd9fb9f646c8bb8d9bd8912d7123").then(function(response){
+        console.log(response.data);
+        axios.post("/articles",{
+          guardian:response.data
+        })
+    })
+
     }
 }
 
