@@ -18,11 +18,11 @@ class SignIn extends Component {
             <div className="SignIn-main">
                 <h1>Welcome to PaperBoy</h1>
                 <h2>Please Sign In</h2>
-                <input onChange={this.setUsername} placeholder="username" />
+                <input onChange={this.setUserName} placeholder="username" />
                 <input onChange={this.setPassword} placeholder="password" />
                 <button onClick={this.logIn}> Log In </button>
                 <h2> Or Create Account </h2>
-                <input onChange={this.setUsername} placeholder="username" />
+                <input onChange={this.setUserName} placeholder="username" />
                 <input onChange={this.setPassword} placeholder="password" />
                 <button onClick={this.createAccount}> Create Account </button>
             </div>
@@ -38,7 +38,7 @@ class SignIn extends Component {
         axios
             .get("/users", {
                 params: {
-                    name: this.state.username,
+                    username: this.state.username,
                     password: this.state.password
                 }
             })
@@ -55,7 +55,7 @@ class SignIn extends Component {
         axios
             .post("/users", {
                 data: {
-                    name: this.state.username,
+                    username: this.state.username,
                     password: this.state.password
                 }
             })
