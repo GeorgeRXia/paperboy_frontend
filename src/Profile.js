@@ -7,11 +7,6 @@ import NewsFeed from "./NewsFeed";
 class Profile extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            nytimes: false,
-            intercept: false
-        };
-        this.displaySelector = this.setNyTimesState.bind(this);
         this.displaySelector = this.displaySelector.bind(this);
         this.displayNewsFeed = this.displayNewsFeed.bind(this);
     }
@@ -40,28 +35,11 @@ class Profile extends Component {
             </div>
         );
     }
-    setNyTimesState(argument) {
-        if (this.state.nytimes === true) {
-            this.setState({ nytimes: false });
-        } else {
-            this.setState({ nytimes: argument });
-        }
-    }
     displaySelector() {
-        return (
-            <Selector
-                nytimesFunction={this.setNyTimesState}
-                interceptFunction={this.setInterceptState}
-            />
-        );
+        return <Selector />;
     }
     displayNewsFeed() {
-        return (
-            <NewsFeed
-                nytimes={this.state.nytimes}
-                intercept={this.state.intercept}
-            />
-        );
+        return <NewsFeed />;
     }
 }
 

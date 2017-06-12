@@ -14,12 +14,7 @@ class App extends Component {
     }
     render() {
         if (this.state.LogIn === false) {
-            return (
-                <SignIn
-                    logInStatus={this.state.LogIn}
-                    logInFunction={this.setLogIn}
-                />
-            );
+            return <SignIn logInFunction={this.setLogIn} />;
         } else {
             return <Profile userid={this.state.user_id} />;
         }
