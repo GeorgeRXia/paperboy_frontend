@@ -7,6 +7,10 @@ import NewsFeed from "./NewsFeed";
 class Profile extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            feed_id: this.props.feedId
+        };
+
         this.displaySelector = this.displaySelector.bind(this);
         this.displayNewsFeed = this.displayNewsFeed.bind(this);
     }
@@ -36,7 +40,7 @@ class Profile extends Component {
         );
     }
     displaySelector() {
-        return <Selector />;
+        return <Selector feedId={this.state.feed_id} />;
     }
     displayNewsFeed() {
         return <NewsFeed />;
