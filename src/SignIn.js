@@ -48,11 +48,11 @@ class SignIn extends Component {
                     console.log(response);
                     console.log(response.data.views);
                     console.log(response.data.user_id);
-
-
+                    console.log(response.data.feed_id);
                     this.props.logInFunction(
                         response.data.views,
-                        response.data.user_id
+                        response.data.user_id,
+                        response.data.feed_id
                     );
                 }.bind(this)
             );
@@ -72,7 +72,8 @@ class SignIn extends Component {
 
                     this.props.logInFunction(
                         response.data.views,
-                        response.data.user_id
+                        response.data.user_id,
+                        response.data.feed_id
                     );
                 }.bind(this)
             );
