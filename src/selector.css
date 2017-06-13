@@ -1,0 +1,15 @@
+body {
+    margin: 0 auto;
+}
+
+.selector_container {
+    display: flex;
+
+}
+
+.selector_img1 {
+    justify-content: space-between;
+    margin: 10px;
+    width: 30%;
+    height: 30%;
+}

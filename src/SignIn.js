@@ -14,6 +14,9 @@ class SignIn extends Component {
         this.logIn = this.logIn.bind(this);
         this.createAccount = this.createAccount.bind(this);
     }
+    componentDidMount(){
+    this.nameInput.focus();
+    }
     render() {
         return (
             <div className="SignIn-main">
@@ -22,6 +25,7 @@ class SignIn extends Component {
                 <h2 className="signin_header2">Please Sign In</h2>
 
                 <input
+                    ref={(input) => { this.nameInput = input; }}
                     className="input"
                     onChange={this.setUserName}
                     placeholder="username"
