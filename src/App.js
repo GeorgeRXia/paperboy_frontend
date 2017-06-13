@@ -45,13 +45,13 @@ class App extends Component {
       axios.get("https://newsapi.org/v1/articles?source=al-jazeera-english&sortBy=top&apiKey=2706fd9fb9f646c8bb8d9bd8912d7123").then(function(response){
         console.log(response.data);
         axios.post("/articles",{
-          guardian:response.data
+          al_jazeera:response.data
         })
     })
       axios.get("https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=2706fd9fb9f646c8bb8d9bd8912d7123").then(function(response){
         console.log(response.data);
         axios.post("/articles",{
-          guardian:response.data
+          bbc:response.data
         })
     })
 
