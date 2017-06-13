@@ -5,7 +5,7 @@
 body {
     background-image: url("paper.jpg");
     background-size: 100vw 100vh;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
         -ms-animation: fadein 2s; /* Internet Explorer */
@@ -37,13 +37,13 @@ text-align: center;
     text-transform: uppercase;
     position: relative;
     vertical-align: baseline;
-    text-shadow: 1px 1px #666666;
+    text-shadow: 2px 2px #b99877;
 
 }
 
 .profile_choose {
 
-    color: #b99877;
+    color: #666666;
     font-size: 1.1rem;
     line-height: 1.4375rem;
     font-weight: 700;
@@ -51,7 +51,7 @@ text-align: center;
     text-transform: uppercase;
     position: relative;
     vertical-align: baseline;
-    margin: 15px;
+    margin: 30px;
     text-shadow: 1px 1px white;
 
 }

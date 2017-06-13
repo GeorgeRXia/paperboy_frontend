@@ -22,25 +22,45 @@ class Selector extends Component {
     render() {
         return (
             <div className="selector_container">
-                <div className="selector_img1">
+                <div className="selector_flexitem">
                     <img
                         src={nytimes}
                         alt="newyorktimes"
                         id="1"
                         onClick={this.selectSource}
                     />
-                    <div id="1" onClick={this.removeSource}>Remove Source</div>
+                    <div className="textbox">
+                        <p className="text">New York Times</p>
+                        <p className="text2"> Click to Add </p>
+                    </div>
+                    <div
+                        className="selector_remove"
+                        id="1"
+                        onClick={this.removeSource}
+                    >
+                        Remove Source
+                    </div>
                 </div>
-                <div className="selector_img1">
+                <div className="selector_flexitem">
                     <img
                         src={intercept}
                         alt="intercept"
                         id="2"
                         onClick={this.selectSource}
                     />
-                    <div id="2" onClick={this.removeSource}>Remove Source</div>
+                    <div className="textbox">
+                        <p className="text">Intercept</p>
+                        <p className="text2"> Click to Add </p>
+                    </div>
+                    <div
+                        className="selector_remove"
+                        id="2"
+                        onClick={this.removeSource}
+                    >
+                        Remove Source
+                    </div>
                 </div>
-                <div className="selector_img1">
+                <div className="selector_flexitem">
 
                     <img
                         src={guardian}
@@ -48,43 +68,93 @@ class Selector extends Component {
                         id="3"
                         onClick={this.selectSource}
                     />
-                    <div id="3" onClick={this.removeSource}>Remove Source</div>
+                    <div className="textbox">
+                        <p className="text">Guardian</p>
+                        <p className="text2"> Click to Add </p>
+                    </div>
+                    <div
+                        className="selector_remove"
+                        id="3"
+                        onClick={this.removeSource}
+                    >
+                        Remove Source
+                    </div>
                 </div>
-                <div className="selector_img1">
+                <div className="selector_flexitem">
                     <img
                         src={jacobin}
                         alt="jacobin"
                         id="4"
                         onClick={this.selectSource}
                     />
-                    <div id="4" onClick={this.removeSource}>Remove Source</div>
+                    <div className="textbox">
+                        <p className="text">Jacobin</p>
+                        <p className="text2"> Click to Add </p>
+                    </div>
+                    <div
+                        className="selector_remove"
+                        id="4"
+                        onClick={this.removeSource}
+                    >
+                        Remove Source
+                    </div>
                 </div>
-                <div className="selector_img1">
+                <div className="selector_flexitem">
                     <img
                         src={billpenn}
                         alt="billpenn"
                         id="5"
                         onClick={this.selectSource}
                     />
-                    <div id="5" onClick={this.removeSource}>Remove Source</div>
+                    <div className="textbox">
+                        <p className="text">Billpenn</p>
+                        <p className="text2"> Click to Add </p>
+                    </div>
+                    <div
+                        className="selector_remove"
+                        id="5"
+                        onClick={this.removeSource}
+                    >
+                        Remove Source
+                    </div>
                 </div>
-                <div className="selector_img1">
+                <div className="selector_flexitem">
                     <img
                         src={jazeera}
                         alt="Al Jazeera America"
                         id="6"
                         onClick={this.selectSource}
                     />
-                    <div id="6" onClick={this.removeSource}>Remove Source</div>
+                    <div className="textbox">
+                        <p className="text">AL Jazeera America</p>
+                        <p className="text2"> Click to Add </p>
+                    </div>
+                    <div
+                        className="selector_remove"
+                        id="6"
+                        onClick={this.removeSource}
+                    >
+                        Remove Source
+                    </div>
                 </div>
-                <div className="selector_img1">
+                <div className="selector_flexitem">
                     <img
                         src={bbc}
                         alt="BBC News"
                         id="7"
                         onClick={this.selectSource}
                     />
-                    <div id="7" onClick={this.removeSource}>Remove Source</div>
+                    <div className="textbox">
+                        <p className="text">BBC News</p>
+                        <p className="text2"> Click to Add </p>
+                    </div>
+                    <div
+                        className="selector_remove"
+                        id="7"
+                        onClick={this.removeSource}
+                    >
+                        Remove Source
+                    </div>
                 </div>
             </div>
         );
