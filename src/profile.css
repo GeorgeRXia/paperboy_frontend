@@ -21,12 +21,37 @@ body {
 
 .profile-div {
 
+text-align: center;
+
 }
 
 .profile_header {
 
+    font-family: "workSans";
+    font-size: 40px;
+    line-height: 23px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10%;
+    margin-bottom: 8%;
+    text-transform: uppercase;
+    position: relative;
+    vertical-align: baseline;
+    text-shadow: 1px 1px #666666;
+
 }
 
 .profile_choose {
-    
+
+    color: #b99877;
+    font-size: 1.1rem;
+    line-height: 1.4375rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    vertical-align: baseline;
+    margin: 15px;
+    text-shadow: 1px 1px white;
+
 }

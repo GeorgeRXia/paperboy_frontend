@@ -5,6 +5,7 @@ import intercept from "./intercept.jpg";
 import billpenn from "./billypenn.jpg";
 import jacobin from "./jacobin.png";
 import axios from "axios";
+import "./selector.css";
 
 class Selector extends Component {
     constructor(props) {
@@ -18,8 +19,8 @@ class Selector extends Component {
     }
     render() {
         return (
-            <div>
-                <div>
+            <div className="selector_container">
+                <div className="selector_img1">
                     <img
                         src={nytimes}
                         alt="newyorktimes"
@@ -28,7 +29,7 @@ class Selector extends Component {
                     />
                     <div id="1" onClick={this.removeSource}>Remove Source</div>
                 </div>
-                <div>
+                <div className="selector_img1">
                     <img
                         src={intercept}
                         alt="intercept"
@@ -37,7 +38,7 @@ class Selector extends Component {
                     />
                     <div id="2" onClick={this.removeSource}>Remove Source</div>
                 </div>
-                <div>
+                <div className="selector_img1">
 
                     <img
                         src={guardian}
@@ -47,7 +48,7 @@ class Selector extends Component {
                     />
                     <div id="3" onClick={this.removeSource}>Remove Source</div>
                 </div>
-                <div>
+                <div className="selector_img1">
                     <img
                         src={jacobin}
                         alt="jacobin"
@@ -56,7 +57,7 @@ class Selector extends Component {
                     />
                     <div id="4" onClick={this.removeSource}>Remove Source</div>
                 </div>
-                <div>
+                <div className="selector_img1">
                     <img
                         src={billpenn}
                         alt="billpenn"
