@@ -26,7 +26,7 @@ body {
 }
 
 .selector_flexitem:hover{
-    transform:scale(1.1);
+    transform:scale(1.05);
     transition: all 1s ease;
     box-shadow: 20px 20px 20px -6px #666666;
 
@@ -76,7 +76,7 @@ body {
 .selector_remove {
     font-family: "workSans";
     background-color: #b99877;
-    margin: 5px;
+    margin: 40px;
     font-size: 14px;
     outline-color: #b99877;
     border-radius: 50px;
