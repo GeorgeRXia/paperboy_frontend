@@ -29,6 +29,10 @@ class Selector extends Component {
                         id="1"
                         onClick={this.selectSource}
                     />
+                    <div className="textbox">
+                        <p className="text">New York Times</p>
+                        <p className="text2"> Click to Add </p>
+                    </div>
                     <div
                         className="selector_remove"
                         id="1"
@@ -44,6 +48,10 @@ class Selector extends Component {
                         id="2"
                         onClick={this.selectSource}
                     />
+                    <div className="textbox">
+                        <p className="text">Intercept</p>
+                        <p className="text2"> Click to Add </p>
+                    </div>
                     <div
                         className="selector_remove"
                         id="2"
@@ -60,6 +68,10 @@ class Selector extends Component {
                         id="3"
                         onClick={this.selectSource}
                     />
+                    <div className="textbox">
+                        <p className="text">Guardian</p>
+                        <p className="text2"> Click to Add </p>
+                    </div>
                     <div
                         className="selector_remove"
                         id="3"
@@ -75,6 +87,10 @@ class Selector extends Component {
                         id="4"
                         onClick={this.selectSource}
                     />
+                    <div className="textbox">
+                        <p className="text">Jacobin</p>
+                        <p className="text2"> Click to Add </p>
+                    </div>
                     <div
                         className="selector_remove"
                         id="4"
@@ -90,6 +106,10 @@ class Selector extends Component {
                         id="5"
                         onClick={this.selectSource}
                     />
+                    <div className="textbox">
+                        <p className="text">Billpenn</p>
+                        <p className="text2"> Click to Add </p>
+                    </div>
                     <div
                         className="selector_remove"
                         id="5"
@@ -105,6 +125,10 @@ class Selector extends Component {
                         id="6"
                         onClick={this.selectSource}
                     />
+                    <div className="textbox">
+                        <p className="text">AL Jazeera America</p>
+                        <p className="text2"> Click to Add </p>
+                    </div>
                     <div
                         className="selector_remove"
                         id="6"
@@ -120,6 +144,10 @@ class Selector extends Component {
                         id="7"
                         onClick={this.selectSource}
                     />
+                    <div className="textbox">
+                        <p className="text">BBC News</p>
+                        <p className="text2"> Click to Add </p>
+                    </div>
                     <div
                         className="selector_remove"
                         id="7"
