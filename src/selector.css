@@ -8,6 +8,7 @@ body {
     width: 100%;
     height: 100%;
     text-align: center;
+    margin-top: 30px;
 
 }
 
@@ -18,9 +19,10 @@ body {
     height: 300px;
     display: block;
     background-color: white;
-    border: 5px solid #b99877;
+    border: 3px solid #b99877;
     padding: 30px;
     position: relative;
+    cursor: pointer;
 }
 
 .selector_flexitem:hover{

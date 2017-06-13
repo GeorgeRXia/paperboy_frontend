@@ -37,13 +37,13 @@ text-align: center;
     text-transform: uppercase;
     position: relative;
     vertical-align: baseline;
-    text-shadow: 1px 1px #666666;
+    text-shadow: 2px 2px #b99877;
 
 }
 
 .profile_choose {
 
-    color: #b99877;
+    color: #666666;
     font-size: 1.1rem;
     line-height: 1.4375rem;
     font-weight: 700;
@@ -51,7 +51,7 @@ text-align: center;
     text-transform: uppercase;
     position: relative;
     vertical-align: baseline;
-    margin: 15px;
+    margin: 30px;
     text-shadow: 1px 1px white;
 
 }
