@@ -9,18 +9,16 @@ class NewsFeed extends Component {
         };
     }
     render() {
-        var newSite = this.state.userArticles.map(function(newsite) {
-            return newsite.articles;
+        var Response = this.state.userArticles.map(function(articles, index) {
+            return (
+                <div key={index}>
+                    <div>{articles.title}</div>
+                    <div>{articles.author}</div>
+                    <div>{articles.content}</div>
+                </div>
+            );
         });
-        console.log(newSite);
-        var articles = newSite.map(function(article) {
-            return article.article;
-        });
-        console.log(articles);
-        var articlesDivs = articles.map(function(article) {
-            return <div>{article.title}</div>;
-        });
-        return <div>{articlesDivs}</div>;
+        return <div>{Response}</div>;
     }
     componentWillMount() {
         axios
@@ -31,8 +29,13 @@ class NewsFeed extends Component {
             })
             .then(
                 function(response) {
-                    console.log(response);
-                    this.setState({ userArticles: response.data });
+                    var Responsemapped = [];
+                    response.data.map(function(articles) {
+                        return articles.articles.map(function(articles) {
+                            return Responsemapped.push(articles);
+                        });
+                    });
+                    this.setState({ userArticles: Responsemapped });
                 }.bind(this)
             );
     }
