@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "/newfeed.css";
 
 class NewsFeed extends Component {
     constructor() {
@@ -10,12 +11,12 @@ class NewsFeed extends Component {
     }
     render() {
         var Response = this.state.userArticles.map(function(articles, index) {
+            console.log(articles);
             return (
-                <div key={index}>
-                    <div>{articles.title}</div>
-                    <div>{articles.author}</div>
-                    <div>{articles.content}</div>
-                    <div>{articles.source}</div>
+                <div className="articleDiv" key={index}>
+                    <div className="articleTitle">{articles.title}</div>
+                    <div className="articleAuthor">{articles.author}</div>
+                    <div className="articleContent">{articles.content}</div>
                 </div>
             );
         });
