@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./signin.css";
 
 class SignIn extends Component {
     constructor(props) {
@@ -16,15 +17,40 @@ class SignIn extends Component {
     render() {
         return (
             <div className="SignIn-main">
-                <h1>Welcome to PaperBoy</h1>
-                <h2>Please Sign In</h2>
-                <input onChange={this.setUserName} placeholder="username" />
-                <input onChange={this.setPassword} placeholder="password" />
-                <button onClick={this.logIn}> Log In </button>
-                <h2> Or Create Account </h2>
-                <input onChange={this.setUserName} placeholder="username" />
-                <input onChange={this.setPassword} placeholder="password" />
-                <button onClick={this.createAccount}> Create Account </button>
+                <h1 className="signin_header">Welcome to PaperBoy</h1>
+                <h3 className="signin_header3">All your News in one place</h3>
+                <h2 className="signin_header2">Please Sign In</h2>
+
+                <input
+                    className="input"
+                    onChange={this.setUserName}
+                    placeholder="username"
+                />
+                <input
+                    className="input"
+                    onChange={this.setPassword}
+                    placeholder="password"
+                />
+                <button className="button" onClick={this.logIn}>
+                    {" "}Log In
+                    {" "}
+                </button>
+                <h2 className="signin_header2"> Or Create Account </h2>
+                <input
+                    className="input"
+                    onChange={this.setUserName}
+                    placeholder="username"
+                />
+                <input
+                    className="input"
+                    onChange={this.setPassword}
+                    placeholder="password"
+                />
+                <button className="button" onClick={this.createAccount}>
+                    {" "}Create Account
+                    {" "}
+                </button>
+                <div className="icon" />
             </div>
         );
     }
