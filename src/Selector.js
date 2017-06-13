@@ -13,40 +13,57 @@ class Selector extends Component {
             feed_id: this.props.feedId
         };
         this.selectSource = this.selectSource.bind(this);
+        this.removeSource = this.removeSource.bind(this);
     }
     render() {
         return (
             <div>
-                <img
-                    src={nytimes}
-                    alt="newyorktimes"
-                    id="1"
-                    onClick={this.selectSource}
-                />
-                <img
-                    src={intercept}
-                    alt="intercept"
-                    id="2"
-                    onClick={this.selectSource}
-                />
-                <img
-                    src={guardian}
-                    alt="gaurdian"
-                    id="3"
-                    onClick={this.selectSource}
-                />
-                <img
-                    src={jacobin}
-                    alt="jacobin"
-                    id="4"
-                    onClick={this.selectSource}
-                />
-                <img
-                    src={billpenn}
-                    alt="billpenn"
-                    id="5"
-                    onClick={this.selectSource}
-                />
+                <div>
+                    <img
+                        src={nytimes}
+                        alt="newyorktimes"
+                        id="1"
+                        onClick={this.selectSource}
+                    />
+                    <div id="1" onClick={this.removeSource}>Remove Source</div>
+                </div>
+                <div>
+                    <img
+                        src={intercept}
+                        alt="intercept"
+                        id="2"
+                        onClick={this.selectSource}
+                    />
+                    <div id="2" onClick={this.removeSource}>Remove Source</div>
+                </div>
+                <div>
+
+                    <img
+                        src={guardian}
+                        alt="gaurdian"
+                        id="3"
+                        onClick={this.selectSource}
+                    />
+                    <div id="3" onClick={this.removeSource}>Remove Source</div>
+                </div>
+                <div>
+                    <img
+                        src={jacobin}
+                        alt="jacobin"
+                        id="4"
+                        onClick={this.selectSource}
+                    />
+                    <div id="4" onClick={this.removeSource}>Remove Source</div>
+                </div>
+                <div>
+                    <img
+                        src={billpenn}
+                        alt="billpenn"
+                        id="5"
+                        onClick={this.selectSource}
+                    />
+                    <div id="5" onClick={this.removeSource}>Remove Source</div>
+                </div>
             </div>
         );
     }
@@ -62,6 +79,20 @@ class Selector extends Component {
             })
             .then(function(response) {
                 console.log(response);
+            });
+    }
+    removeSource(event) {
+        var parseId = parseInt(event.target.id);
+        var alt = event.target.alt;
+        axios
+            .delete("/chosensites/1", {
+                data: {
+                    newssite_id: parseId
+                }
+            })
+            .then(function(response) {
+                console.log(response);
+                alert("You have removed" + { alt });
             });
     }
 }
