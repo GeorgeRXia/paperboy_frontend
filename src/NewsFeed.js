@@ -7,9 +7,17 @@ class NewsFeed extends Component {
         this.state = {
             userArticles: []
         };
+
     }
     render() {
-        var Response = this.state.userArticles.map(function(articles, index) {
+
+      var sortedArticles = this.state.userArticles.sort(function(a, b) {
+          a = new Date(a.date);
+          b = new Date(b.date);
+          return a>b ? -1 : a<b ? 1 : 0;
+      });
+      console.log(sortedArticles);
+        var Response = sortedArticles.slice(0, 30).map(function(articles, index) {
             return (
                 <div key={index}>
                     <div>{articles.title}</div>
