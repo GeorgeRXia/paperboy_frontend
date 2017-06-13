@@ -10,7 +10,8 @@ class Selector extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            feed_id: this.props.feedId
+            feed_id: this.props.feedId,
+            user_id: this.props.userId
         };
         this.selectSource = this.selectSource.bind(this);
         this.removeSource = this.removeSource.bind(this);
@@ -70,6 +71,8 @@ class Selector extends Component {
     selectSource(event) {
         var parseId = parseInt(event.target.id);
         var feedId = this.state.feed_id;
+        var userId = this.state.user_id;
+
         axios
             .post("/chosensites", {
                 data: {
@@ -84,15 +87,18 @@ class Selector extends Component {
     removeSource(event) {
         var parseId = parseInt(event.target.id);
         var alt = event.target.alt;
+        var feedId = this.state.feed_id;
+        var userId = this.state.user_id;
         axios
             .delete("/chosensites/1", {
                 data: {
+                    feed_id: feedId,
                     newssite_id: parseId
                 }
             })
             .then(function(response) {
                 console.log(response);
-                alert("You have removed" + { alt });
+                alert("You have removed your source");
             });
     }
 }
