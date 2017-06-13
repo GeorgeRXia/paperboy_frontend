@@ -86,9 +86,7 @@ class Selector extends Component {
     }
     removeSource(event) {
         var parseId = parseInt(event.target.id);
-        var alt = event.target.alt;
         var feedId = this.state.feed_id;
-        var userId = this.state.user_id;
         axios
             .delete("/chosensites/1", {
                 data: {

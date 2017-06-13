@@ -15,6 +15,7 @@ class NewsFeed extends Component {
                     <div>{articles.title}</div>
                     <div>{articles.author}</div>
                     <div>{articles.content}</div>
+                    <div>{articles.source}</div>
                 </div>
             );
         });
