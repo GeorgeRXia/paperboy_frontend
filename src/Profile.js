@@ -8,7 +8,8 @@ class Profile extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            feed_id: this.props.feedId
+            feed_id: this.props.feedId,
+            user_id: this.props.userId
         };
 
         this.displaySelector = this.displaySelector.bind(this);
@@ -40,10 +41,14 @@ class Profile extends Component {
         );
     }
     displaySelector() {
-        return <Selector feedId={this.state.feed_id} />;
+        return (
+            <Selector userId={this.state.user_id} feedId={this.state.feed_id} />
+        );
     }
     displayNewsFeed() {
-        return <NewsFeed feedId={this.state.feed_id} />;
+        return (
+            <NewsFeed userId={this.state.user_id} feedId={this.state.feed_id} />
+        );
     }
 }
 
