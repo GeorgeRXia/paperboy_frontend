@@ -4,8 +4,11 @@ import guardian from "./gaurdian.svg";
 import intercept from "./intercept.jpg";
 import billpenn from "./billypenn.jpg";
 import jacobin from "./jacobin.png";
+import bbc from "./bbc.png"
+import jazeera from "./jazeera.png"
 import axios from "axios";
 import "./selector.css";
+
 
 class Selector extends Component {
     constructor(props) {
@@ -65,6 +68,24 @@ class Selector extends Component {
                         onClick={this.selectSource}
                     />
                     <div id="5" onClick={this.removeSource}>Remove Source</div>
+                </div>
+                <div>
+                    <img
+                        src={jazeera}
+                        alt="Al Jazeera America"
+                        id="6"
+                        onClick={this.selectSource}
+                    />
+                    <div id="6" onClick={this.removeSource}>Remove Source</div>
+                </div>
+                <div>
+                    <img
+                        src={bbc}
+                        alt="BBC News"
+                        id="7"
+                        onClick={this.selectSource}
+                    />
+                    <div id="7" onClick={this.removeSource}>Remove Source</div>
                 </div>
             </div>
         );
