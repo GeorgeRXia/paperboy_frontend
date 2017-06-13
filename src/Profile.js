@@ -19,11 +19,11 @@ class Profile extends Component {
             <div className="profile-div">
                 <BrowserRouter>
                     <div>
-                        <h1>PaperBoy News</h1>
-                        <label>
+                        <h1 className="profile_header">PaperBoy News</h1>
+                        <label className="profile_choose">
                             Choose Your News:<Link to="/selector">Select</Link>
                         </label>
-                        <label>
+                        <label className="profile_choose">
                             Go to Feed:<Link to="/newssites"> News</Link>
                         </label>
                         <Route

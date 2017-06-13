@@ -76,12 +76,19 @@ body {
 
 }
 
+.input:focus {
+    outline-color: #b99877;
+}
+
 .button {
     font-family: "workSans";
     background-color: #b99877;
     margin: 5px;
     font-size: 14px;
+}
 
+.button:focus {
+    outline-color: #b99877;
 }
 
 .icon {
