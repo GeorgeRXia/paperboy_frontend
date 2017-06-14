@@ -46,16 +46,22 @@ text-align: center;
     /*font-size: 1.1rem;*/
     /*line-height: 1.4375rem;
     font-weight: 700;*/
+    font-size: 15px;
     letter-spacing: 1px;
     text-transform: lowercase;
     position: relative;
     vertical-align: baseline;
     margin: 30px;
-    background-color: #b99077;
+    background-color: white;
     outline-color: #b99877;
     border-radius: 50px;
-    border: 2px solid #666666;
-    text-shadow: 1px 1px #b99877;
-    padding: 10px;
+    border: 2px solid #b99877;
+    text-shadow: .5px .5px #666666;
+    padding: 5px;
+    box-shadow: 20px 20px 20px -6px #666666;
 
+}
+
+.profile_choose a {    
+    color: #666666;
 }
