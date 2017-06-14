@@ -15,144 +15,91 @@ class Selector extends Component {
         this.state = {
             feed_id: this.props.feedId,
             user_id: this.props.userId,
-            source: []
+            sources: []
         };
         this.selectSource = this.selectSource.bind(this);
         this.removeSource = this.removeSource.bind(this);
     }
     render() {
-        // var selectedSource = [];
-        // var unselectedSource = [];
-        // this.source.map;
+        var selectedSource = [];
+        var unselectedSource = [];
+        this.state.sources.map(function(source) {
+            if (source.selected === true) {
+                selectedSource.push(source);
+            } else {
+                unselectedSource.push(source);
+            }
+        });
+        console.log(selectedSource);
+        console.log(unselectedSource);
+
+        var selectedDiv = selectedSource.map(
+            function(source) {
+                return (
+                    <div
+                        className="selector_flexitem"
+                        onClick={this.selectSource}
+                        id={source.id}
+                    >
+                        <img
+                            src={source.picture}
+                            alt={source.name}
+                            id={source.id}
+                        />
+                        <div className="textbox" id={source.id}>
+                            <p className="text" id={source.id}>{source.name}</p>
+                            <p className="text2" id={source.id}>
+                                {" "}Click to Add{" "}
+                            </p>
+                        </div>
+                        <div
+                            className="selector_remove"
+                            id={source.id}
+                            onClick={this.removeSource}
+                        >
+                            Remove Source
+                        </div>
+                    </div>
+                );
+            }.bind(this)
+        );
+        var unSelectedDiv = unselectedSource.map(
+            function(source) {
+                return (
+                    <div
+                        className="selector_flexitem"
+                        onClick={this.selectSource}
+                        id={source.id}
+                    >
+                        <img
+                            src={source.picture}
+                            alt={source.name}
+                            id={source.id}
+                        />
+                        <div className="textbox" id={source.id}>
+                            <p className="text" id={source.id}>{source.name}</p>
+                            <p className="text2" id={source.id}>
+                                {" "}Click to Add{" "}
+                            </p>
+                        </div>
+                        <div
+                            className="selector_remove"
+                            id={source.id}
+                            onClick={this.removeSource}
+                        >
+                            Remove Source
+                        </div>
+                    </div>
+                );
+            }.bind(this)
+        );
+
         return (
             <div className="selector_container">
-                <div
-                    className="selector_flexitem"
-                    id="1"
-                    onClick={this.selectSource}
-                >
-                    <img src={nytimes} alt="newyorktimes" id="1" />
-                    <div className="textbox">
-                        <p className="text">New York Times</p>
-                        <p className="text2"> Click to Add </p>
-                    </div>
-                    <div
-                        className="selector_remove"
-                        id="1"
-                        onClick={this.removeSource}
-                    >
-                        Remove Source
-                    </div>
-                </div>
-                <div
-                    className="selector_flexitem"
-                    id="2"
-                    onClick={this.selectSource}
-                >
-                    <img src={intercept} alt="intercept" id="2" />
-                    <div className="textbox">
-                        <p className="text">Intercept</p>
-                        <p className="text2"> Click to Add </p>
-                    </div>
-                    <div
-                        className="selector_remove"
-                        id="2"
-                        onClick={this.removeSource}
-                    >
-                        Remove Source
-                    </div>
-                </div>
-                <div
-                    className="selector_flexitem"
-                    id="3"
-                    onClick={this.selectSource}
-                >
-
-                    <img src={guardian} alt="gaurdian" id="3" />
-                    <div className="textbox">
-                        <p className="text">Guardian</p>
-                        <p className="text2"> Click to Add </p>
-                    </div>
-                    <div
-                        className="selector_remove"
-                        id="3"
-                        onClick={this.removeSource}
-                    >
-                        Remove Source
-                    </div>
-                </div>
-                <div
-                    className="selector_flexitem"
-                    id="4"
-                    onClick={this.selectSource}
-                >
-                    <img src={jacobin} alt="jacobin" id="4" />
-                    <div className="textbox">
-                        <p className="text">Jacobin</p>
-                        <p className="text2"> Click to Add </p>
-                    </div>
-                    <div
-                        className="selector_remove"
-                        id="4"
-                        onClick={this.removeSource}
-                    >
-                        Remove Source
-                    </div>
-                </div>
-                <div
-                    className="selector_flexitem"
-                    id="5"
-                    onClick={this.selectSource}
-                >
-                    <img src={billpenn} alt="billpenn" id="5" />
-                    <div className="textbox">
-                        <p className="text">Billpenn</p>
-                        <p className="text2"> Click to Add </p>
-                    </div>
-                    <div
-                        className="selector_remove"
-                        id="5"
-                        onClick={this.removeSource}
-                    >
-                        Remove Source
-                    </div>
-                </div>
-                <div
-                    className="selector_flexitem"
-                    id="6"
-                    onClick={this.selectSource}
-                >
-                    <img src={jazeera} alt="Al Jazeera America" id="6" />
-                    <div className="textbox">
-                        <p className="text">AL Jazeera America</p>
-                        <p className="text2"> Click to Add </p>
-                    </div>
-                    <div
-                        className="selector_remove"
-                        id="6"
-                        onClick={this.removeSource}
-                    >
-                        Remove Source
-                    </div>
-                </div>
-                <div
-                    className="selector_flexitem"
-                    id="7"
-                    onClick={this.selectSource}
-                >
-                    <img src={bbc} alt="BBC News" id="7" />
-                    <div className="textbox">
-                        <p className="text">BBC News</p>
-                        <p className="text2"> Click to Add </p>
-                    </div>
-                    <div
-                        className="selector_remove"
-                        id="7"
-                        onClick={this.removeSource}
-                    >
-                        Remove Source
-                    </div>
-                </div>
+                <div>Selected Sites:</div>
+                <div>{selectedDiv}</div>
+                <div>Unselected Sites:</div>
+                <div>{unSelectedDiv}</div>
             </div>
         );
     }
@@ -161,6 +108,8 @@ class Selector extends Component {
         var feedId = this.state.feed_id;
         var userId = this.state.user_id;
         console.log(parseId);
+
+        console.log(event.target.id);
 
         axios
             .post("/chosensites", {
@@ -205,37 +154,44 @@ class Selector extends Component {
                         {
                             name: "New York Times",
                             selected: response.data.NewYorkTimes,
-                            id: 1
+                            id: 1,
+                            picture: nytimes
                         },
                         {
                             name: "The Intercept",
                             selected: response.data.Intercept,
-                            id: 2
+                            id: 2,
+                            picture: intercept
                         },
                         {
                             name: "Guardian",
                             selected: response.data.Guardian,
-                            id: 3
+                            id: 3,
+                            picture: guardian
                         },
                         {
                             name: "Jacobin",
                             selected: response.data.Jacobin,
-                            id: 4
+                            id: 4,
+                            picture: jacobin
                         },
                         {
-                            name: "BillyPen",
+                            name: "Billy Pen",
                             selected: response.data.BillyPen,
-                            id: 5
+                            id: 5,
+                            picture: billpenn
                         },
                         {
                             name: "Aljazeera",
                             selected: response.data.Aljazeera,
-                            id: 6
+                            id: 6,
+                            picture: jazeera
                         },
                         {
                             name: "BBC",
                             selected: response.data.BBC,
-                            id: 7
+                            id: 7,
+                            picture: bbc
                         }
                     ];
 
