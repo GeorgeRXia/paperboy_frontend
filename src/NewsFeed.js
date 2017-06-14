@@ -19,8 +19,10 @@ class NewsFeed extends Component {
       console.log(sortedArticles);
         var Response = sortedArticles.slice(0, 30).map(function(articles, index) {
             return (
+
                 <div key={index}>
-                    <div>{articles.title}</div>
+                    <div>{articles.newssite_id}</div>
+                    <div><a href = {articles.url}>{articles.title}</a></div>
                     <div>{articles.author}</div>
                     <div>{articles.content}</div>
                 </div>
