@@ -37,6 +37,8 @@ class NewsFeed extends Component {
                     <div className="articleDiv" key={index}>
                         <div className="articleTitle">{articles.title}</div>
                         <div className="articleAuthor">{articles.author}</div>
+                        <div>{articles.newssite_id}</div>
+                        <div>{articles.date}</div>
                         <div className="articleContent">{articles.content}</div>
                     </div>
                 );
