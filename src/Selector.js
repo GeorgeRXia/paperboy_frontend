@@ -19,6 +19,7 @@ class Selector extends Component {
         };
         this.selectSource = this.selectSource.bind(this);
         this.removeSource = this.removeSource.bind(this);
+        this.chosenSiteRun = this.chosenSiteRun.bind(this);
     }
     render() {
         var selectedSource = [];
@@ -36,28 +37,35 @@ class Selector extends Component {
         var selectedDiv = selectedSource.map(
             function(source) {
                 return (
-                    <div
-                        className="selector_flexitem"
-                        onClick={this.selectSource}
-                        id={source.id}
-                    >
-                        <img
-                            src={source.picture}
-                            alt={source.name}
-                            id={source.id}
-                        />
-                        <div className="textbox" id={source.id}>
-                            <p className="text" id={source.id}>{source.name}</p>
-                            <p className="text2" id={source.id}>
-                                {" "}Click to Add{" "}
-                            </p>
-                        </div>
+                    <div>
                         <div
-                            className="selector_remove"
+                            className="selector_flexitem"
+                            onClick={this.selectSource}
                             id={source.id}
-                            onClick={this.removeSource}
                         >
-                            Remove Source
+                            <img
+                                src={source.picture}
+                                alt={source.name}
+                                id={source.id}
+                            />
+                            <div className="textbox" id={source.id}>
+                                <p className="text" id={source.id}>
+                                    {source.name}
+                                </p>
+                                <p className="text2" id={source.id}>
+                                    {" "}Click to Add{" "}
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+
+                            <div
+                                className="selector_remove"
+                                id={source.id}
+                                onClick={this.removeSource}
+                            >
+                                Remove Source
+                            </div>
                         </div>
                     </div>
                 );
@@ -118,9 +126,12 @@ class Selector extends Component {
                     newssite_id: parseId
                 }
             })
-            .then(function(response) {
-                console.log(response);
-            });
+            .then(
+                function(response) {
+                    console.log(response);
+                    this.chosenSiteRun();
+                }.bind(this)
+            );
     }
     removeSource(event) {
         var parseId = event.target.id;
@@ -132,12 +143,18 @@ class Selector extends Component {
                     newssite_id: parseId
                 }
             })
-            .then(function(response) {
-                console.log(response);
-                alert("You have removed your source");
-            });
+            .then(
+                function(response) {
+                    console.log(response);
+                    alert("You have removed your source");
+                    this.chosenSiteRun();
+                }.bind(this)
+            );
     }
     componentWillMount() {
+        this.chosenSiteRun();
+    }
+    chosenSiteRun() {
         var feedId = this.state.feed_id;
 
         axios
