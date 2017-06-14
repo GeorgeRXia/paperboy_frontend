@@ -36,7 +36,7 @@ class Selector extends Component {
         var selectedDiv = selectedSource.map(
             function(source) {
                 return (
-                    <div
+                  <div
                         className="selector_flexitem"
                         onClick={this.selectSource}
                         id={source.id}

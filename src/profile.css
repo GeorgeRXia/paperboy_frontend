@@ -42,26 +42,25 @@ text-align: center;
 }
 
 .profile_choose {
-
-    /*font-size: 1.1rem;*/
-    /*line-height: 1.4375rem;
-    font-weight: 700;*/
-    font-size: 15px;
+    border: 2px solid #b99877;
+    outline: 2px solid #666666;
+    color: #b99877;
+    font-size: 1.0rem;
+    line-height: 1.4375rem;
+    font-weight: 700;
     letter-spacing: 1px;
-    text-transform: lowercase;
+    text-transform: uppercase;
     position: relative;
     vertical-align: baseline;
-    margin: 30px;
-    background-color: white;
-    outline-color: #b99877;
-    border-radius: 50px;
-    border: 2px solid #b99877;
+    margin: 15px;
     text-shadow: .5px .5px #666666;
     padding: 5px;
-    box-shadow: 20px 20px 20px -6px #666666;
-
+    background-color: white;
+    box-shadow: 10px 10px 10px -6px #666666;
+    cursor: pointer;
 }
 
-.profile_choose a {    
-    color: #666666;
+.profile_choose a {
+    color: #b99877;
+    text-decoration: none;
 }
