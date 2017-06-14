@@ -23,6 +23,7 @@ body {
     padding: 30px;
     position: relative;
     cursor: pointer;
+    pointer-events: all;
 }
 
 .selector_flexitem:hover{

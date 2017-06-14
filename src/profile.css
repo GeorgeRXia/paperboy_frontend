@@ -43,15 +43,19 @@ text-align: center;
 
 .profile_choose {
 
-    color: #666666;
-    font-size: 1.1rem;
-    line-height: 1.4375rem;
-    font-weight: 700;
+    /*font-size: 1.1rem;*/
+    /*line-height: 1.4375rem;
+    font-weight: 700;*/
     letter-spacing: 1px;
-    text-transform: uppercase;
+    text-transform: lowercase;
     position: relative;
     vertical-align: baseline;
     margin: 30px;
-    text-shadow: 1px 1px white;
+    background-color: #b99077;
+    outline-color: #b99877;
+    border-radius: 50px;
+    border: 2px solid #666666;
+    text-shadow: 1px 1px #b99877;
+    padding: 10px;
 
 }
