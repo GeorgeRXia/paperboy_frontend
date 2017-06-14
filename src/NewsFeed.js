@@ -53,6 +53,7 @@ class NewsFeed extends Component {
             })
             .then(
                 function(response) {
+                  console.log(response);
                     var Responsemapped = [];
                     response.data.map(function(articles) {
                         return articles.articles.map(function(articles) {
