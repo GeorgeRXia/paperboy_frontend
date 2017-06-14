@@ -37,6 +37,7 @@ class Profile extends Component {
                         />
                     </div>
                 </BrowserRouter>
+                <NewsFeed userId={this.state.user_id} feedId={this.state.feed_id} />
             </div>
         );
     }
