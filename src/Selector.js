@@ -23,7 +23,14 @@ class Selector extends Component {
     render() {
         var selectedSource = [];
         var unselectedSource = [];
-        this.source.map;
+        this.state.source.map(function(source) {
+            if (source.selected === true) {
+                selectSource.push(source);
+                console.log(source);
+            } else {
+                unselectedSource.push(source);
+            }
+        });
         return (
             <div className="selector_container">
                 <div className="selector_flexitem">
@@ -212,37 +219,44 @@ class Selector extends Component {
                         {
                             name: "New York Times",
                             selected: response.data.NewYorkTimes,
-                            id: 1
+                            id: 1,
+                            picture: { nytimes }
                         },
                         {
                             name: "The Intercept",
                             selected: response.data.Intercept,
-                            id: 2
+                            id: 2,
+                            picture: { intercept }
                         },
                         {
                             name: "Guardian",
                             selected: response.data.Guardian,
-                            id: 3
+                            id: 3,
+                            picture: { guardian }
                         },
                         {
                             name: "Jacobin",
                             selected: response.data.Jacobin,
-                            id: 4
+                            id: 4,
+                            picture: { jacobin }
                         },
                         {
                             name: "BillyPen",
                             selected: response.data.BillyPen,
-                            id: 5
+                            id: 5,
+                            picture: { billpenn }
                         },
                         {
                             name: "Aljazeera",
                             selected: response.data.Aljazeera,
-                            id: 6
+                            id: 6,
+                            picture: { jazeera }
                         },
                         {
                             name: "BBC",
                             selected: response.data.BBC,
-                            id: 7
+                            id: 7,
+                            picture: { bbc }
                         }
                     ];
 
