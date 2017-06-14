@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./NewsFeed.css";
+import dateFormat from 'dateformat'
 
 class NewsFeed extends Component {
     constructor() {
@@ -16,6 +17,7 @@ class NewsFeed extends Component {
           a = new Date(a.date);
           b = new Date(b.date);
           return a>b ? -1 : a<b ? 1 : 0;
+
       });
       console.log(sortedArticles);
         var Response = sortedArticles.slice(0, 30).map(function(articles, index) {
@@ -29,7 +31,8 @@ class NewsFeed extends Component {
                 </div>
             );
 
-        });
+
+            });
         console.log(sortedArticles);
         var Response = sortedArticles
             .slice(0, 30)
@@ -44,11 +47,12 @@ class NewsFeed extends Component {
                             <div className="articleAuthor">
                                 {articles.author}
                             </div>
+                            <div>{dateFormat(articles.date, "dddd, mmmm dS, yyyy, h:MM:ss TT")}</div>
                             <div className="articleContent">
                                 {articles.content}
                             </div>
                             <div className="articleUrl">
-                                {" "}{articles.url}
+                                {" "}<a href={articles.url}>{articles.url} </a>
                                 {" "}
                             </div>
                         </div>
@@ -63,11 +67,10 @@ class NewsFeed extends Component {
                 params: {
                     feed_id: this.props.feedId
                 }
-
             })
             .then(
                 function(response) {
-                  console.log(response);
+                    console.log(response);
                     var Responsemapped = [];
                     response.data.map(function(articles) {
                         return articles.articles.map(function(articles) {
