@@ -21,7 +21,7 @@ class SignIn extends Component {
         return (
             <div className="SignIn-main">
                 <h1 className="signin_header">Welcome to PaperBoy</h1>
-                <h3 className="signin_header3">All your News in one place</h3>
+                <h3 className="signin_header3">All your News Delivered</h3>
                 <h2 className="signin_header2">Please Sign In</h2>
 
                 <input

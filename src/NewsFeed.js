@@ -8,12 +8,27 @@ class NewsFeed extends Component {
         this.state = {
             userArticles: []
         };
+        console.log(this.state.userArticles);
     }
     render() {
-        var sortedArticles = this.state.userArticles.sort(function(a, b) {
-            a = new Date(a.date);
-            b = new Date(b.date);
-            return a > b ? -1 : a < b ? 1 : 0;
+
+      var sortedArticles = this.state.userArticles.sort(function(a, b) {
+          a = new Date(a.date);
+          b = new Date(b.date);
+          return a>b ? -1 : a<b ? 1 : 0;
+      });
+      console.log(sortedArticles);
+        var Response = sortedArticles.slice(0, 30).map(function(articles, index) {
+            return (
+
+                <div key={index}>
+                    <div>{articles.newssite_id}</div>
+                    <div><a href = {articles.url}>{articles.title}</a></div>
+                    <div>{articles.author}</div>
+                    <div>{articles.content}</div>
+                </div>
+            );
+
         });
         console.log(sortedArticles);
         var Response = sortedArticles
@@ -48,9 +63,11 @@ class NewsFeed extends Component {
                 params: {
                     feed_id: this.props.feedId
                 }
+
             })
             .then(
                 function(response) {
+                  console.log(response);
                     var Responsemapped = [];
                     response.data.map(function(articles) {
                         return articles.articles.map(function(articles) {
