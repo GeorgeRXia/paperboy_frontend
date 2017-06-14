@@ -21,10 +21,18 @@ class Selector extends Component {
         this.removeSource = this.removeSource.bind(this);
     }
     render() {
+        var selectedSource = [];
+        var unselectedSource = [];
+        this.source.map;
         return (
             <div className="selector_container">
-                <div className="selector_flexitem" onClick={this.selectSource}>
-                    <img src={nytimes} alt="newyorktimes" id="1" />
+                <div className="selector_flexitem">
+                    <img
+                        src={nytimes}
+                        alt="newyorktimes"
+                        id="1"
+                        onClick={this.selectSource}
+                    />
                     <div className="textbox">
                         <p className="text">New York Times</p>
                         <p className="text2"> Click to Add </p>
@@ -37,7 +45,7 @@ class Selector extends Component {
                         Remove Source
                     </div>
                 </div>
-                <div className="selector_flexitem" onClick={this.selectSource}>
+                <div className="selector_flexitem">
                     <img
                         src={intercept}
                         alt="intercept"
@@ -56,7 +64,7 @@ class Selector extends Component {
                         Remove Source
                     </div>
                 </div>
-                <div className="selector_flexitem" onClick={this.selectSource}>
+                <div className="selector_flexitem">
 
                     <img
                         src={guardian}
@@ -76,7 +84,7 @@ class Selector extends Component {
                         Remove Source
                     </div>
                 </div>
-                <div className="selector_flexitem" onClick={this.selectSource}>
+                <div className="selector_flexitem">
                     <img
                         src={jacobin}
                         alt="jacobin"
@@ -95,7 +103,7 @@ class Selector extends Component {
                         Remove Source
                     </div>
                 </div>
-                <div className="selector_flexitem" onClick={this.selectSource}>
+                <div className="selector_flexitem">
                     <img
                         src={billpenn}
                         alt="billpenn"
@@ -114,7 +122,7 @@ class Selector extends Component {
                         Remove Source
                     </div>
                 </div>
-                <div className="selector_flexitem" onClick={this.selectSource}>
+                <div className="selector_flexitem">
                     <img
                         src={jazeera}
                         alt="Al Jazeera America"
@@ -133,7 +141,7 @@ class Selector extends Component {
                         Remove Source
                     </div>
                 </div>
-                <div className="selector_flexitem" onClick={this.selectSource}>
+                <div className="selector_flexitem">
                     <img
                         src={bbc}
                         alt="BBC News"
