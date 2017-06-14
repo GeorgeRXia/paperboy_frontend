@@ -26,7 +26,11 @@ class Selector extends Component {
         // this.source.map;
         return (
             <div className="selector_container">
-                <div className="selector_flexitem" onClick={this.selectSource}>
+                <div
+                    className="selector_flexitem"
+                    id="1"
+                    onClick={this.selectSource}
+                >
                     <img src={nytimes} alt="newyorktimes" id="1" />
                     <div className="textbox">
                         <p className="text">New York Times</p>
@@ -40,7 +44,11 @@ class Selector extends Component {
                         Remove Source
                     </div>
                 </div>
-                <div className="selector_flexitem" onClick={this.selectSource}>
+                <div
+                    className="selector_flexitem"
+                    id="2"
+                    onClick={this.selectSource}
+                >
                     <img src={intercept} alt="intercept" id="2" />
                     <div className="textbox">
                         <p className="text">Intercept</p>
@@ -54,7 +62,11 @@ class Selector extends Component {
                         Remove Source
                     </div>
                 </div>
-                <div className="selector_flexitem" onClick={this.selectSource}>
+                <div
+                    className="selector_flexitem"
+                    id="3"
+                    onClick={this.selectSource}
+                >
 
                     <img src={guardian} alt="gaurdian" id="3" />
                     <div className="textbox">
@@ -69,7 +81,11 @@ class Selector extends Component {
                         Remove Source
                     </div>
                 </div>
-                <div className="selector_flexitem" onClick={this.selectSource}>
+                <div
+                    className="selector_flexitem"
+                    id="4"
+                    onClick={this.selectSource}
+                >
                     <img src={jacobin} alt="jacobin" id="4" />
                     <div className="textbox">
                         <p className="text">Jacobin</p>
@@ -83,7 +99,11 @@ class Selector extends Component {
                         Remove Source
                     </div>
                 </div>
-                <div className="selector_flexitem" onClick={this.selectSource}>
+                <div
+                    className="selector_flexitem"
+                    id="5"
+                    onClick={this.selectSource}
+                >
                     <img src={billpenn} alt="billpenn" id="5" />
                     <div className="textbox">
                         <p className="text">Billpenn</p>
@@ -97,7 +117,11 @@ class Selector extends Component {
                         Remove Source
                     </div>
                 </div>
-                <div className="selector_flexitem" onClick={this.selectSource}>
+                <div
+                    className="selector_flexitem"
+                    id="6"
+                    onClick={this.selectSource}
+                >
                     <img src={jazeera} alt="Al Jazeera America" id="6" />
                     <div className="textbox">
                         <p className="text">AL Jazeera America</p>
@@ -111,7 +135,11 @@ class Selector extends Component {
                         Remove Source
                     </div>
                 </div>
-                <div className="selector_flexitem" onClick={this.selectSource}>
+                <div
+                    className="selector_flexitem"
+                    id="7"
+                    onClick={this.selectSource}
+                >
                     <img src={bbc} alt="BBC News" id="7" />
                     <div className="textbox">
                         <p className="text">BBC News</p>
