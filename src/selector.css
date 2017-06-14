@@ -24,6 +24,7 @@ body {
     position: relative;
     cursor: pointer;
     pointer-events: all;
+    outline: 2px solid #666666;
 }
 
 .selector_flexitem:hover{
@@ -78,10 +79,20 @@ body {
 
 .selector_remove {
     font-family: "workSans";
-    background-color: #b99877;
-    margin: 40px;
+    border: 2px solid #b99877;
+    outline: 2px solid #666666;
+    color: #666666;
     font-size: 14px;
-    outline-color: #b99877;
-    border-radius: 50px;
-    border: 2px solid #666666;
+    line-height: 1.4375rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    vertical-align: baseline;
+    margin: 5px;
+    text-shadow: 0.5px 0.5px #b99877;
+    padding: 5px;
+    background-color: white;
+    -webkit-box-shadow: 10px 10px 10px -6px #666666;
+    box-shadow: 10px 10px 10px -6px #666666;
+    cursor: pointer;
 }
