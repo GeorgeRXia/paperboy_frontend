@@ -7,7 +7,7 @@ class NewsFeed extends Component {
         this.state = {
             userArticles: []
         };
-
+        console.log(this.state.userArticles);
     }
     render() {
 
@@ -27,7 +27,20 @@ class NewsFeed extends Component {
                     <div>{articles.content}</div>
                 </div>
             );
+
         });
+        console.log(sortedArticles);
+        var Response = sortedArticles
+            .slice(0, 30)
+            .map(function(articles, index) {
+                return (
+                    <div className="articleDiv" key={index}>
+                        <div className="articleTitle">{articles.title}</div>
+                        <div className="articleAuthor">{articles.author}</div>
+                        <div className="articleContent">{articles.content}</div>
+                    </div>
+                );
+            });
         return <div>{Response}</div>;
     }
     componentWillMount() {
@@ -36,6 +49,7 @@ class NewsFeed extends Component {
                 params: {
                     feed_id: this.props.feedId
                 }
+
             })
             .then(
                 function(response) {
