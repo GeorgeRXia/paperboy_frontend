@@ -15,14 +15,15 @@ body {
 .selector_flexitem {
     justify-content: space-around;
     margin: 20px auto;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     display: block;
     background-color: white;
     border: 3px solid #b99877;
     padding: 30px;
     position: relative;
     cursor: pointer;
+    pointer-events: all;
 }
 
 .selector_flexitem:hover{
@@ -47,7 +48,7 @@ body {
     width:100%;
     height:100%;
     position:absolute;
-    pointer-events: none;
+    /*pointer-events: none;*/
     top:0;
     left:0;
     opacity:0;
@@ -62,7 +63,7 @@ body {
     padding-top: 45%;
     font-family: "workSans";
     color: #b99877;
-    font-size: 36px;
+    font-size: 28px;
     text-shadow: 1px 1px #c9c9c9;
 }
 
@@ -70,7 +71,7 @@ body {
     padding-top: 10px;
     font-family: "workSans";
     color: #b99877;
-    font-size: 18px;
+    font-size: 15px;
     text-shadow: 1px 1px #c9c9c9;
 
 }
