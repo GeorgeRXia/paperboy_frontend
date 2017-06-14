@@ -108,7 +108,6 @@ class Selector extends Component {
         var feedId = this.state.feed_id;
         var userId = this.state.user_id;
         console.log(parseId);
-        console.log(userId);
 
         console.log(event.target.id);
 
@@ -124,6 +123,7 @@ class Selector extends Component {
             });
     }
     removeSource(event) {
+      console.log(event.target);
         var parseId = event.target.id;
         var feedId = this.state.feed_id;
         axios
@@ -138,7 +138,7 @@ class Selector extends Component {
                 alert("You have removed your source");
             });
     }
-    componentWillMount() {
+    componentDidMount() {
         var feedId = this.state.feed_id;
 
         axios

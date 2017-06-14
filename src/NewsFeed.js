@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./NewsFeed.css";
 
 class NewsFeed extends Component {
     constructor() {
@@ -34,12 +35,23 @@ class NewsFeed extends Component {
             .slice(0, 30)
             .map(function(articles, index) {
                 return (
-                    <div className="articleDiv" key={index}>
-                        <div className="articleTitle">{articles.title}</div>
-                        <div className="articleAuthor">{articles.author}</div>
-                        <div>{articles.newssite_id}</div>
-                        <div>{articles.date}</div>
-                        <div className="articleContent">{articles.content}</div>
+                    <div className="articleContainer">
+                        <div className="articleDiv" key={index}>
+                            <div className="articleTitle">
+                                {articles.title}
+                            </div>
+                            {" "}
+                            <div className="articleAuthor">
+                                {articles.author}
+                            </div>
+                            <div className="articleContent">
+                                {articles.content}
+                            </div>
+                            <div className="articleUrl">
+                                {" "}{articles.url}
+                                {" "}
+                            </div>
+                        </div>
                     </div>
                 );
             });
