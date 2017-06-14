@@ -207,7 +207,7 @@ class Selector extends Component {
                         },
                         {
                             name: "BBC",
-                            selected: response.data.BBC,
+                            selected: response.data.Bbc,
                             id: 7,
                             picture: bbc
                         }
