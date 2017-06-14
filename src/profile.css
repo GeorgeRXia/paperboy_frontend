@@ -1,0 +1,57 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    background-image: url("paper.jpg");
+    background-size: 100vw 100vh;
+    background-repeat: repeat;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+.profile-div {
+
+text-align: center;
+
+}
+
+.profile_header {
+
+    font-family: "workSans";
+    font-size: 40px;
+    line-height: 23px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10%;
+    margin-bottom: 8%;
+    text-transform: uppercase;
+    position: relative;
+    vertical-align: baseline;
+    text-shadow: 2px 2px #b99877;
+
+}
+
+.profile_choose {
+
+    color: #666666;
+    font-size: 1.1rem;
+    line-height: 1.4375rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    vertical-align: baseline;
+    margin: 30px;
+    text-shadow: 1px 1px white;
+
+}
