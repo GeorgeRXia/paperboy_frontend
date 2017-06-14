@@ -22,17 +22,19 @@ class NewsFeed extends Component {
                 return (
                     <div className="articleContainer">
                         <div className="articleDiv" key={index}>
-                            <a href={articles.url}>
-                                <div className="articleTitle">
-                                    {articles.title}
-                                </div>
-                                {" "}
-                            </a>
+                            <div className="articleTitle">
+                                {articles.title}
+                            </div>
+                            {" "}
                             <div className="articleAuthor">
                                 {articles.author}
                             </div>
                             <div className="articleContent">
                                 {articles.content}
+                            </div>
+                            <div className="articleUrl">
+                                {" "}{articles.url}
+                                {" "}
                             </div>
                         </div>
                     </div>
