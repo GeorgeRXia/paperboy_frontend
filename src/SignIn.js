@@ -16,6 +16,7 @@ class SignIn extends Component {
     }
     componentDidMount(){
     this.nameInput.focus();
+    axios.get('/articles').then(response => console.log("success"));
     }
     render() {
         return (
