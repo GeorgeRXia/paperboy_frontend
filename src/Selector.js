@@ -149,7 +149,6 @@ class Selector extends Component {
             })
             .then(
                 function(response) {
-                    alert("You have removed your source");
                     this.chosenSiteRun();
                 }.bind(this)
             );

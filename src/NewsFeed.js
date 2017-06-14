@@ -23,7 +23,7 @@ class NewsFeed extends Component {
 
                 <div key={index}>
                     <div>{articles.newssite_id}</div>
-                    <div><a href = {articles.url}>{articles.title}</a></div>
+                    <div>{articles.title}</div>
                     <div>{articles.author}</div>
                     <div>{articles.content}</div>
                 </div>
