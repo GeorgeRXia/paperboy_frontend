@@ -7,30 +7,25 @@ class NewsFeed extends Component {
         this.state = {
             userArticles: []
         };
-
     }
     render() {
-<<<<<<< HEAD
-        var Response = this.state.userArticles.map(function(articles, index) {
-            console.log(articles);
-=======
-
-      var sortedArticles = this.state.userArticles.sort(function(a, b) {
-          a = new Date(a.date);
-          b = new Date(b.date);
-          return a>b ? -1 : a<b ? 1 : 0;
-      });
-      console.log(sortedArticles);
-        var Response = sortedArticles.slice(0, 30).map(function(articles, index) {
->>>>>>> 1d71975974dc518aa010a3d3a029ba835cb26ce4
-            return (
-                <div className="articleDiv" key={index}>
-                    <div className="articleTitle">{articles.title}</div>
-                    <div className="articleAuthor">{articles.author}</div>
-                    <div className="articleContent">{articles.content}</div>
-                </div>
-            );
+        var sortedArticles = this.state.userArticles.sort(function(a, b) {
+            a = new Date(a.date);
+            b = new Date(b.date);
+            return a > b ? -1 : a < b ? 1 : 0;
         });
+        console.log(sortedArticles);
+        var Response = sortedArticles
+            .slice(0, 30)
+            .map(function(articles, index) {
+                return (
+                    <div className="articleDiv" key={index}>
+                        <div className="articleTitle">{articles.title}</div>
+                        <div className="articleAuthor">{articles.author}</div>
+                        <div className="articleContent">{articles.content}</div>
+                    </div>
+                );
+            });
         return <div>{Response}</div>;
     }
     componentWillMount() {
