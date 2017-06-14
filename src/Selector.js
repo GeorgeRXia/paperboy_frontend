@@ -112,9 +112,9 @@ class Selector extends Component {
 
         return (
             <div className="selector_container">
-                <div>Selected Sites:</div>
+                <div className="selector_selected">Selected Sites:</div>
                 <div>{selectedDiv}</div>
-                <div>Unselected Sites:</div>
+                <div className="selector_selected">Unselected Sites:</div>
                 <div>{unSelectedDiv}</div>
             </div>
         );

@@ -96,3 +96,18 @@ body {
     box-shadow: 10px 10px 10px -6px #666666;
     cursor: pointer;
 }
+
+.selector_selected {
+    font-family: "workSans";
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10%;
+    margin-bottom: 8%;
+    text-transform: uppercase;
+    position: relative;
+    vertical-align: baseline;
+    text-shadow: 1px 1px #b99877;
+    text-decoration: underline;
+}
