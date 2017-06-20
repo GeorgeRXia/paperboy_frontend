@@ -43,7 +43,7 @@ class App extends Component {
           )
           .then(function(response) {
               console.log(response.data);
-              axios.post("http://papperboi.herokuapp.com/articles", {
+              axios.post("https://papperboi.herokuapp.com/articles", {
                   bbc: response.data
               });
           });
@@ -54,7 +54,7 @@ class App extends Component {
           .then(function(response) {
               var jazz = response.data.articles
               console.log(jazz);
-              axios.post("http://papperboi.herokuapp.com/articles", {
+              axios.post("https://papperboi.herokuapp.com/articles", {
 
                   al_jazeera: response.data
               })
@@ -65,7 +65,7 @@ class App extends Component {
             )
             .then(function(response) {
                 console.log(response.data);
-                axios.post("http://papperboi.herokuapp.com/articles", {
+                axios.post("https://papperboi.herokuapp.com/articles", {
                     guardian: response.data
                 });
 

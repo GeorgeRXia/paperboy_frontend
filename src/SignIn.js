@@ -16,7 +16,7 @@ class SignIn extends Component {
     }
     componentDidMount(){
     this.nameInput.focus();
-    axios.get('http://papperboi.herokuapp.com/articles').then(response => console.log("success"));
+    axios.get('https://papperboi.herokuapp.com/articles').then(response => console.log("success"));
     }
     render() {
         return (
@@ -67,7 +67,7 @@ class SignIn extends Component {
     }
     logIn() {
         axios
-            .get("http://papperboi.herokuapp.com/users", {
+            .get("https://papperboi.herokuapp.com/users", {
                 params: {
                     username: this.state.username,
                     password: this.state.password
@@ -90,7 +90,7 @@ class SignIn extends Component {
     }
     createAccount() {
         axios
-            .post("http://papperboi.herokuapp.com/users", {
+            .post("https://papperboi.herokuapp.com/users", {
                 data: {
                     username: this.state.username,
                     password: this.state.password

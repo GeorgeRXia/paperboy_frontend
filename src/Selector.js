@@ -125,7 +125,7 @@ class Selector extends Component {
         console.log(parseId);
 
         axios
-            .post("http://papperboi.herokuapp.com/chosensites", {
+            .post("https://papperboi.herokuapp.com/chosensites", {
                 data: {
                     feed_id: feedId,
                     newssite_id: parseId
@@ -141,7 +141,7 @@ class Selector extends Component {
         var parseId = event.target.id;
         var feedId = this.state.feed_id;
         axios
-            .delete("http://papperboi.herokuapp.com/chosensites/1", {
+            .delete("https://papperboi.herokuapp.com/chosensites/1", {
                 data: {
                     feed_id: feedId,
                     newssite_id: parseId
@@ -160,7 +160,7 @@ class Selector extends Component {
         var feedId = this.state.feed_id;
 
         axios
-            .get("http://papperboi.herokuapp.com/chosensites", {
+            .get("https://papperboi.herokuapp.com/chosensites", {
                 params: {
                     feed_id: feedId
                 }

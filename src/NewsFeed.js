@@ -62,7 +62,7 @@ class NewsFeed extends Component {
     }
     componentWillMount() {
         axios
-            .get("http://papperboi.herokuapp.com/feeds", {
+            .get("https://papperboi.herokuapp.com/feeds", {
                 params: {
                     feed_id: this.props.feedId
                 }
