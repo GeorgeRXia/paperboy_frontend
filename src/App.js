@@ -36,14 +36,14 @@ class App extends Component {
     }
 
     componentDidMount() {
-      
+
       axios
           .get(
               "https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=2706fd9fb9f646c8bb8d9bd8912d7123"
           )
           .then(function(response) {
               console.log(response.data);
-              axios.post("/articles", {
+              axios.post("http://papperboi.herokuapp.com/articles", {
                   bbc: response.data
               });
           });
@@ -54,7 +54,7 @@ class App extends Component {
           .then(function(response) {
               var jazz = response.data.articles
               console.log(jazz);
-              axios.post("/articles", {
+              axios.post("http://papperboi.herokuapp.com/articles", {
 
                   al_jazeera: response.data
               })
@@ -65,7 +65,7 @@ class App extends Component {
             )
             .then(function(response) {
                 console.log(response.data);
-                axios.post("/articles", {
+                axios.post("http://papperboi.herokuapp.com/articles", {
                     guardian: response.data
                 });
 

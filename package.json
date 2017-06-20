@@ -2,7 +2,7 @@
   "name": "paperboy_frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000",
+  "homepage": "https://ianzolitor.github.io/paperboy_frontend/",
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
@@ -12,6 +12,8 @@
     "react-scripts": "1.0.7"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
