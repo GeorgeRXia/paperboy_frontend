@@ -33,7 +33,6 @@ class NewsFeed extends Component {
 
 
             });
-        console.log(sortedArticles);
         var Response = sortedArticles
             .slice(0, 30)
             .map(function(articles, index) {
