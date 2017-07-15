@@ -1,3 +1,13 @@
+https://ianzolitor.github.io/paperboy_frontend/
+
+Login: helper
+password: helper
+
+Or you can create your own user.
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
